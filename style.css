@@ -14,12 +14,33 @@ body{
 .flex{
     display:flex;
 }
+
+#show-more{
+    background: rgb(212, 135, 212);
+    color:white;
+    height:1.9rem;
+    width:1.9rem;
+    border-radius:50%;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    display:none;
+}
+#show-more i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
 table {
     width:100%;
+    margin:auto;
     margin-top:4.5rem;
     font-size:0.86rem;
     border-collapse:collapse;
     white-space: nowrap;
+    overflow-x:hidden;
 }
 table tr{
     width:100%;
@@ -102,7 +123,7 @@ table th{
     border-radius:1.25rem;
     box-shadow:0.625rem 0.625rem 0.98rem 0.3125rem rgb(223, 222, 222);
     min-height:95vh;
-    overflow-x:scroll;
+ 
 
 }
 
@@ -249,6 +270,13 @@ input,select{
     font-size:1rem;
 }
 
+.overflow-hidden{
+    overflow-x:hidden;
+}
+.overflow-scroll{
+    overflow:scroll
+}
+
 
 @media(max-width:1320px){
     html{
@@ -261,5 +289,41 @@ input,select{
         font-size:80%;
     }
 
+    
+}
+@media(max-width:800px){
+    html{
+        font-size:75%;
+    }
+    
+}
+@media(max-width:730px){
+    html{
+        font-size:65%;
+    }
+    
+}
+@media(max-width:650px){
+    html{
+        font-size:60%;
+    }
+    
+}
+@media(max-width:550px){
+    .hidden-m{
+        display:none;
+    }
+  
+}
+@media(max-width:450px){
+    .hidden-s{
+        display:none;
+    }
+    
+}
+@media(max-width:340px){
+    .hidden-xs{
+        display:none;
+    }
     
 }

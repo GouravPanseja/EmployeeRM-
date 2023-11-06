@@ -1,9 +1,105 @@
 const table = document.getElementById('table');
 const addBtn = document.getElementById('add-btn');
 const formExit= document.getElementById('form-exit');
+const showMore = document.getElementById('show-more');
+const container = document.getElementsByClassName('container')[0];
+var col3= document.getElementsByClassName('hidden-xs');
+var col4= document.getElementsByClassName('hidden-s');
+var col5= document.getElementsByClassName('hidden-m');
+const smIcon= document.getElementById('show-more-icon');
 
 
+
+console.log(col3);
 const tl = gsap.timeline();
+
+const showMoreFunc = ()=>{
+
+    if(window.innerWidth<=550){
+        showMore.style.display="block";
+    }
+    else{
+        showMore.style.display="none";
+    }
+}
+
+var show=false;
+
+document.addEventListener("DOMContentLoaded", showMoreFunc);
+
+showMore.addEventListener('click',()=>{
+
+
+    if(!show){
+
+
+    console.log("clicked");
+    console.log(container.classList);
+    container.classList.remove('overflow-hidden');
+    console.log(container.classList);
+
+    Array.from(col3).forEach((col)=>{
+        console.log("removed");
+        col.classList.remove('hidden-xs');
+    })
+    Array.from(col4).forEach((col)=>{
+        console.log("removed");
+        col.classList.remove('hidden-s');
+    })
+    Array.from(col5).forEach((col)=>{
+        console.log("removed");
+        col.classList.remove('hidden-m');
+    })
+
+    container.classList.add('overflow-scroll');
+
+    gsap.to('#show-more',{
+        transform:"rotate(180deg)",
+        duration:0.5,
+    })
+    console.log(col3,col4,col5);
+
+    show=true;
+    }
+
+    else{
+        console.log("clicked-again");
+
+        container.classList.remove('overflow-scroll');
+        container.classList.add('overflow-hidden');
+
+        console.log(col3,col4,col5);
+    
+        Array.from(col3).forEach((col)=>{
+            console.log("added");
+            col.classList.add('hidden-xs');
+        })
+        Array.from(col4).forEach((col)=>{
+            console.log("added");
+            col.classList.add('hidden-s');
+        })
+        Array.from(col5).forEach((col)=>{
+            console.log("added");
+            col.classList.add('hidden-m');
+        })
+    
+
+    
+        gsap.to('#show-more',{
+            transform:"rotate(180deg)",
+            duration:0.5,
+        })
+
+        show=false;
+    }
+   
+
+
+  
+
+
+    
+})
 
 tl.from('.nav-left-effect',{
     x:"-100%",
@@ -37,10 +133,10 @@ function createEmp(details) {
     var temp=`
         <tr class="emp">
             <td class="emp-name"><img class="emp-img" src="${url}">${name} </td>
-            <td class="hidden">${number}</td>
-            <td class="hidden">${email}</td>
-            <td class="hidden">${position}</td>
-            <td class="hidden">${department}</td>
+            <td>${number}</td>
+            <td class="hidden-xs">${email}</td>
+            <td class="hidden-s">${position}</td>
+            <td class="hidden-m">${department}</td>
         </tr>`
 
     emp.insertAdjacentHTML("afterbegin",temp);
