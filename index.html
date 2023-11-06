@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+        <div class="input-form">
+            <div class="form-heading" >
+                <h2 >Add Employee</h2> <div><i id="form-exit" class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <form onSubmit="false">
+                <div class="form-part">
+                    <label for="name">Full Name</label>
+                    <input class="form-input" type="text" name="name" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Phone number</label>
+                    <input class="form-input" type="number" name="number" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Email</label>
+                    <input class="form-input" type="email" name="email" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Job Position</label>
+                    <select id="position-select" aria-placeholder="Select">
+                        <option>Human Resources</option>
+                        <option>Web Developer</option>
+                        <option>Medical Assistant</option>
+                        <option>Presiden of Sales</option>
+
+                    </select>
+                </div>
+                <div class="form-part">
+                    <select id="department-select">
+                        <option>Finance</option>
+                        <option>Marketing </option>
+                        <option>Sales</option>
+                    
+                    </select>
+                </div>
+                <div class="form-part">
+                    <input type="file" name="img-input" accept="image">
+                </div>
+
+                <input type="submit" id="submit-btn" class="form-add-btn"></input> 
+            </form>
+            
+            
+           
+        </div>
+
+        <div class="nav-left-effect"></div>
+     
+     <div class="input-form-cont"></div>
+            
+        <div class="container">
+
+           
+            <div class="nav flex">
+                <div class="nav-left">
+                        Employee Overview
+                </div>
+                
+                <div class="nav-right flex">
+                    <div id="add-btn"><span>+</span></div>
+                    <div> Add Person</div>
+
+                </div>
+                
+            </div>
+
+            <table id="table">
+
+                <tr class="heading">
+                    <th>Name</th>
+                    <th class="hidden">Phone Number</th>
+                    <th class="hidden">Email</th>
+                    <th class="hidden">Job Position</th>
+                    <th class="hidden">Department</th>
+                </tr>
+
+                <tr class="emp">
+                    <td class="emp-name"><img class="emp-img" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"><span>Gourav</span> </td>
+                    <td class="hidden">998848589</td>
+                    <td class="hidden">rahul@yahoo.com</td>
+                    <td class="hidden">General Manager</td>
+                    <td class="hidden">Web Designer</td>
+                </tr>
+            </table> 
+        </div>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
+</body>
+</html>
