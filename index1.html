@@ -4,65 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://media.istockphoto.com/id/1448337091/vector/seamless-neon-color-zigzag-geometric-pattern.jpg?b=1&s=612x612&w=0&k=20&c=RuR41aRpnmhrawlvs8vFGG0ZWgNd78i42sya_6waWfI=" type="image/x-icon">
+
 </head>
 <body>
-    <div class="container">
-
-        <h1>Employee Overview</h1>
-
-        <table>
-
-  
-            <ul>
-                <li> Name</li>
-                <li>Phone Number</li>
-                <li>Email</li>
-                <li>Job Position</li>
-                <li>Department</li>
-            </ul>
-            
-            <ul class="emp">
-            
-                <li><input type="checkbox"> <img class="emp-img" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"> </li>
-                <li>998848589</li>
-                <li>rahul@yahoo.com</li>
-                <li>General Manager</li>
-                <li>Web Designer</li>
-            </ul>
-            <ul class="emp">
-            
-                <li><input type="checkbox"> <img class="emp-img" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"> </li>
-                <li>998848589</li>
-                <li>rahul@yahoo.com</li>
-                <li>General Manager</li>
-                <li>Web Designer</li>
-            </ul>
-            <ul class="emp">
-            
-                <li><input type="checkbox"> <img class="emp-img" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"> </li>
-                <li>998848589</li>
-                <li>rahul@yahoo.com</li>
-                <li>General Manager</li>
-                <li>Web Designer</li>
-            </ul>
-
-        </table>
+    <div class="bot-btn "><i class="fa-solid fa-message fa-flip-horizontal"></i></div>
+    <div class="bot-div">
+         <i class="fa-solid fa-xmark bot-exit"></i>
+         <iframe class="hidden bot" src="https://web.powerva.microsoft.com/environments/Default-451ec92a-0b41-4561-b1b4-94e638141e07/bots/cr863_querifyBot/webchat?__version__=2" frameborder="0" ></iframe>
     </div>
-    
-    
- 
+   
+        <div class="input-form">
+            <div class="form-heading" >
+                <h2 >Add Employee</h2> <div><i id="form-exit" class="fa-solid fa-xmark"></i></div>
+            </div>
 
+            <form onSubmit="false">
+                <div class="form-part">
+                    <label for="name">Full Name</label>
+                    <input class="form-input" type="text" name="name" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Phone number</label>
+                    <input class="form-input" type="number" name="number" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Email</label>
+                    <input class="form-input" type="email" name="email" required>
+                </div>
+                <div class="form-part">
+                    <label for="name">Job Position</label>
+                    <select id="position-select" aria-placeholder="Select">
+                        <option>Human Resources</option>
+                        <option>Web Developer</option>
+                        <option>Medical Assistant</option>
+                        <option>Presiden of Sales</option>
 
+                    </select>
+                </div>
+                <div class="form-part">
+                    <select id="department-select">
+                        <option>Finance</option>
+                        <option>Marketing </option>
+                        <option>Sales</option>
+                    
+                    </select>
+                </div>
+                <div class="form-part">
+                    <label for="input-file">Upload Image</label>
+                    <input class="input-file" type="file" name="img-input" id="input-file" accept="image">
+                </div>
 
+                <input type="submit" id="submit-btn" class="form-add-btn"></input> 
+            </form>
+            
+            
+           
+        </div>
 
+        <div class="nav-left-effect"></div>
+     
+     <div class="input-form-cont"></div>
+     <div id="show-more" ><i id="show-more-icon" class="fa-solid fa-angle-right"></i></div>
+            
+        <div class="container overflow-hidden">
 
+           
+            <div class="nav flex">
+                <div class="nav-left">
+                        Employee Overview
+                </div>
+                
+                <div class="nav-right flex">
+                    <div id="add-btn"><span>+</span> </div>
+                    <div class="hidden-m"> Add Person</div>
 
-    
+                </div>
+                
+            </div>
 
+            <table id="table">
 
-    <script src="script.js"></script>
+                <tr class="heading">
+                    <th>Name</th>
+                    <th >Phone Number</th>
+                    <th id="hidden-xs" class="hidden-xs">Email</th>
+                    <th class="hidden-s">Job Position</th>
+                    <th class="hidden-m">Department</th>
+                </tr>
+
+                <tr class="emp">
+                    <td class="emp-name"><img class="emp-img" src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"><span>Gourav</span> </td>
+                    <td >998848589</td>
+                    <td  class="hidden-xs">rahul@yahoo.com</td>
+                    <td class="hidden-s">General Manager</td>
+                    <td class="hidden-m">Web Designer</td>
+                </tr>
+            </table> 
+        </div>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script1.js"></script>
 </body>
-
-
 </html>
