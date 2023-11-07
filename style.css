@@ -27,14 +27,14 @@
     padding: 50px 60px 70px;
     text-align: center;
     border-radius:20px;
-    box-shadow:5px 5px 100px rgb(231, 231, 231);
+    box-shadow:5px 5px 10px #5102d1;
 }
 
 .form-box h1{
     font-size: 30px;
     margin-bottom: 60px;
     color: #3c00a0;
-position: relative;
+    position: relative;
 }
 
 .form-box h1::after{
