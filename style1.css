@@ -293,7 +293,7 @@ input,select{
     border-radius:50%;
     background: rgb(212, 135, 212);
     position:fixed;
-    right:1.9rem;
+    right:1.3rem;
     bottom:4.375rem;
     cursor:pointer;
     filter: drop-shadow(5px 5px 10px rgb(148, 148, 148));
